@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Serif', serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    opacity: 1;
+    z-index: 9;
+    animation: fade-out 5s forwards 1;
+    pointer-events: none;
+}
+
+@keyframes fade-out{
+    to {
+        opacity: 0
+    }
+}
+
+.left-side {
+    width: 20vw;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    align-items: center;
+
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2vw;
+    position: absolute;
+    top: 4vw;
+    left: -1.5vw;
+    transform: rotate(-90deg);
+    user-select: none;
+}
+
+.sm-product {
+    width: 100%;
+    height: auto;
+
+}
+
+.product-index {
+    font-size: 2vw;
+    text-align: center;
+}
+
+.sm-product-img-container {
+    position: relative;
+    margin: .5vw 0;
+    height: 15vw;
+    overflow: hidden;
+
+}
+
+.sm-product-img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.sm-product-des {
+    text-align: right;
+    padding: 0 .5vw;
+    line-height: 1.5vw;
+    font-size: 1vw;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.social-link {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+.social-link-img {
+    width: 1.6vw;
+    height: 1.6vw;
+    margin: .5vw;
+    cursor: pointer;
+
+}
+
+.social-link-img:hover {
+    width: 1.8vw;
+    height: 1.8vw;
+
+}
+
+.right-side {
+    width: 80vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.backdrop-img {
+    width: 25vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    object-fit: cover;
+    filter: blur(.5vw);
+    user-select: none;
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.product-detail {
+    width: 60%;
+}
+
+.product-name {
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Sirin Stencil', cursive;
+    font-weight: 400;
+    line-height: 9vw;
+}
+
+.product-desc {
+    margin: 4vw 0;
+    width: 90%;
+    font-size: 1.2vw;
+    line-height: 2vw;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.buy-btn {
+    text-decoration: none;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 1.2vw;
+}
+
+.nxt-btn {
+    border: none;
+    background: none;
+    display: flex;
+    margin-left: auto;
+    margin-top: -1.2vw;
+    margin-right: 1vw;
+    cursor: pointer;
+    justify-content: center;
+    user-select: none;
+}
+
+.nxt-btn img {
+    width: 60%;   
+}
+
+.product-img-container {
+    width: 40%;
+    height: 40vw;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    animation: slide-left 1s linear 1;
+}
+
+@keyframes slide-left {
+    to {
+        left: 100%;
+    }
+}
+
+.fade {
+    pointer-events: none;
+    animation: fade 1s forwards 1;
+}
+
+@keyframes fade {
+    0%, 100% {opacity: 1; }
+    45%, 60% {opacity: 0; }
+}
